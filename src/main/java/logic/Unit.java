@@ -6,7 +6,7 @@ public class Unit {
     private final Ship ship;
     private int damage;
     private int stress;
-    private Position centerPosition;
+    public Position centerPosition;
 
     public Unit(Ship ship, Position centerPosition) {
         this.ship = ship;

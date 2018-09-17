@@ -1,16 +1,19 @@
-import logic.Ship;
-import logic.ShipReader;
+import logic.*;
 
 import java.io.IOException;
 
 public class Main {
 
     public static void main(String[] args) {
+        Ship foo;
         try {
-            Ship test = ShipReader.ReadShipFromFile("/home/wurst/Documents/git/XWing/ships.json");
-            System.out.println(test);
+            foo = ShipReader.ReadShipFromFile("/home/wurst/Documents/git/XWing/ships.json");
         } catch (IOException e) {
             e.printStackTrace();
+            return;
         }
+
+        Unit bar = new Unit(foo, new Position(0, 0, Math.PI));
+        bar.centerPosition = Move.applyMove(Move.Type.LTurn1, bar.centerPosition);
     }
 }

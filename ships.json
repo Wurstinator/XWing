@@ -1,0 +1,11 @@
+{
+  "pilotName": "Blue Squadron Escort",
+  "shipName": "T-65 X-Wing",
+  "faction": "Rebellion",
+  "initiative": 2,
+  "attackValue": 3,
+  "agilityValue": 2,
+  "hullValue": 4,
+  "shieldValue": 2,
+  "forceValue": 0
+}

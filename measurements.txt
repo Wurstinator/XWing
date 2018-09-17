@@ -1,0 +1,12 @@
+Ships:
+3.5 cm x 4 cm (left-right sides are longer)
+bulleteye arc width: 1.5 cm
+
+straights:
+4 / 8 / 12 cm
+(width 2cm)
+
+banks:
+45° turn; inner circle radius 7.2 /  / cm
+(width 2cm)
+

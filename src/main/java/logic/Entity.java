@@ -8,9 +8,9 @@ import com.vividsolutions.jts.geom.Polygon;
  */
 public interface Entity {
     /**
-     * The hitbox of this entity as a polygon.
+     * The hit box of this entity as a polygon.
      *
      * @return The Polygon object that defines the outline.
      */
-    public Polygon hitbox();
+    Polygon hitbox();
 }

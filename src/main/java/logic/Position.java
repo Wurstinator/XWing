@@ -1,5 +1,13 @@
 package logic;
 
+
+import com.vividsolutions.jts.geom.Coordinate;
+import com.vividsolutions.jts.geom.GeometryFactory;
+import com.vividsolutions.jts.geom.Point;
+
+/**
+ * Represents the position of a unit on a board.
+ */
 public class Position {
     public double x;
     public double y;
@@ -9,6 +17,12 @@ public class Position {
         this.x = x;
         this.y = y;
         this.angle = angle % (Math.PI * 2);
+    }
+
+    public Position(Position other) {
+        this.x = other.x;
+        this.y = other.y;
+        this.angle = other.angle;
     }
 
     public void moveTo(double distance, double directionAngle) {
@@ -28,15 +42,7 @@ public class Position {
         moveTo(distance, (angle + Math.PI / 4) % (Math.PI * 2));
     }
 
-    public void turn90() {
-        turn(Math.PI / 4);
-    }
-
-    public void turn180() {
-        turn(Math.PI / 2);
-    }
-
-    public void turn270() {
-        turn(Math.PI * 3 / 4);
+    public Point toPoint() {
+        return (new GeometryFactory()).createPoint(new Coordinate(x, y));
     }
 }

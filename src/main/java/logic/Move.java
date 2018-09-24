@@ -143,7 +143,7 @@ public class Move {
             case RTurn3:
                 return turnLambda(3, true);
         }
-        throw new EnumConstantNotPresentException("");
+        throw new RuntimeException("invalid movement type");
     }
 
     /**

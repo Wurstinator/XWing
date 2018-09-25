@@ -10,6 +10,11 @@ import com.vividsolutions.jts.geom.Polygon;
  */
 public class Unit implements Entity {
     private final Ship ship;
+
+    public Ship getShip() {
+        return ship;
+    }
+
     private int damage;
     private int stress;
     public Position centerPosition;

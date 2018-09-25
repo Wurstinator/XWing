@@ -117,6 +117,8 @@ public class HelloWorld {
         });
 
         Ship ship = new Ship();
+        ship.setPilotName("Luke Skywalker");
+        ship.setShipName("XWing");
         unit = new Unit(ship, new Position(Constants.BOARD_SIZE / 2., Constants.BOARD_SIZE / 2., 0));
         vunit = new VUnit(unit);
     }

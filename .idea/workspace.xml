@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b2fed8e7-4728-42e9-83a6-139cbe6e334a" name="Default Changelist" comment="Added &quot;visual&quot; package.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/visual/shaders/screen.frag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/visual/shaders/screen.vert" afterDir="false" />
+    <list default="true" id="b2fed8e7-4728-42e9-83a6-139cbe6e334a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/xwing/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xwing/visual/Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xwing/visual/VLine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xwing/visual/VPolygon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xwing/visual/VUnit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xwing/visual/shaders/screen.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xwing/visual/shaders/screen.vert" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/xwing/visual/shaders/vpolygon.frag" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XWing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/XWing.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/visual/HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/visual/HelloWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xwing/logic/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/DiceRoller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xwing/logic/DiceRoller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xwing/logic/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xwing/logic/Move.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Obstacle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xwing/logic/Obstacle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xwing/logic/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xwing/logic/Ship.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/ShipReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xwing/logic/ShipReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xwing/logic/Unit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/visual/HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xwing/visual/HelloWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/visual/shaders/screen.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/visual/shaders/screen.vert" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/xwing/visual/shaders/vpolygon.vert" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -23,51 +36,55 @@
     <session id="-907129807">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="frag" value="4" />
+          <entry key="frag" value="45" />
           <entry key="gitignore" value="7" />
-          <entry key="java" value="10931" />
+          <entry key="java" value="16251" />
           <entry key="json" value="30" />
-          <entry key="txt" value="270" />
-          <entry key="vert" value="2" />
+          <entry key="txt" value="311" />
+          <entry key="vert" value="876" />
           <entry key="xml" value="89" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="GLSL shader file" value="6" />
-          <entry key="JAVA" value="10931" />
+          <entry key="GLSL shader file" value="921" />
+          <entry key="JAVA" value="16251" />
           <entry key="JSON" value="30" />
-          <entry key="PLAIN_TEXT" value="277" />
+          <entry key="PLAIN_TEXT" value="318" />
           <entry key="XML" value="89" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="frag" value="1" />
+          <entry key="class" value="1" />
+          <entry key="frag" value="6" />
           <entry key="gitignore" value="1" />
           <entry key="iml" value="1" />
-          <entry key="java" value="19" />
+          <entry key="java" value="33" />
           <entry key="json" value="1" />
           <entry key="txt" value="1" />
-          <entry key="vert" value="1" />
+          <entry key="vert" value="9" />
           <entry key="xml" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="CLASS" value="1" />
+          <entry key="GLSL shader file" value="13" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="19" />
+          <entry key="JAVA" value="33" />
           <entry key="JSON" value="1" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="XML" value="8" />
@@ -76,35 +93,106 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/visual/HelloWorld.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/xwing/visual/HelloWorld.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="84" column="29" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
+            <state relative-caret-position="1343">
+              <caret line="151" column="30" lean-forward="true" selection-start-line="151" selection-start-column="30" selection-end-line="151" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5000#5001#0" expanded="true" />
-                <element signature="e#5038#5039#0" expanded="true" />
+                <element signature="e#6930#6931#0" expanded="true" />
+                <element signature="e#6968#6969#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/xwing/Constants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/xwing/visual/VUnit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/logic/Board.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/xwing/visual/Util.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+            <state relative-caret-position="255">
+              <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/logic/Entity.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/xwing/logic/Unit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+            <state relative-caret-position="391">
+              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="26" />
+              <folding>
+                <element signature="e#585#586#0" expanded="true" />
+                <element signature="e#615#616#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/xwing/logic/Position.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+              <folding>
+                <element signature="e#675#676#0" expanded="true" />
+                <element signature="e#703#704#0" expanded="true" />
+                <element signature="e#1031#1032#0" expanded="true" />
+                <element signature="e#1102#1103#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/xwing/visual/VPolygon.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="582">
+              <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#348#349#0" expanded="true" />
+                <element signature="e#379#380#0" expanded="true" />
+                <element signature="e#429#430#0" expanded="true" />
+                <element signature="e#469#470#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/xwing/visual/VLine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="565">
+              <caret line="94" column="23" selection-start-line="94" selection-start-column="23" selection-end-line="94" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -148,11 +236,26 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/screen.vert" />
         <option value="$PROJECT_DIR$/src/screen.frag" />
-        <option value="$PROJECT_DIR$/src/main/java/visual/shaders/screen.frag" />
-        <option value="$PROJECT_DIR$/src/main/java/visual/shaders/screen.vert" />
-        <option value="$PROJECT_DIR$/src/main/java/visual/HelloWorld.java" />
         <option value="$PROJECT_DIR$/src/main/java/logic/Board.java" />
         <option value="$PROJECT_DIR$/src/main/java/logic/Entity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/visual/shaders/screen.frag" />
+        <option value="$PROJECT_DIR$/src/main/java/visual/shaders/screen.vert" />
+        <option value="$PROJECT_DIR$/src/main/java/visual/shaders/vpolygon.vert" />
+        <option value="$PROJECT_DIR$/src/main/java/visual/HelloWorld.java" />
+        <option value="$PROJECT_DIR$/src/main/java/visual/VPolygon.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Constants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xwing/logic/Unit.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xwing/logic/Board.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xwing/logic/Move.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xwing/logic/Position.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xwing/visual/HelloWorld.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xwing/visual/Util.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xwing/visual/VUnit.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xwing/visual/shaders/screen.vert" />
+        <option value="$PROJECT_DIR$/src/main/java/xwing/visual/shaders/vpolygon.vert" />
+        <option value="$PROJECT_DIR$/src/main/java/xwing/visual/VPolygon.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xwing/visual/VLine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/xwing/Constants.java" />
       </list>
     </option>
   </component>
@@ -185,6 +288,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -216,6 +320,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="xwing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XWing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XWing" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="xwing" type="462c0819:PsiDirectoryNode" />
               <item name="logic" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -224,13 +337,23 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="xwing" type="462c0819:PsiDirectoryNode" />
               <item name="visual" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XWing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XWing" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="xwing" type="462c0819:PsiDirectoryNode" />
+              <item name="visual" type="462c0819:PsiDirectoryNode" />
+              <item name="shaders" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -244,11 +367,14 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/visual/shaders" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="logic" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/visual/shaders" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/visual/shaders" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -265,11 +391,11 @@
   </component>
   <component name="RunManager" selected="Application.HelloWorld">
     <configuration name="HelloWorld" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="visual.HelloWorld" />
+      <option name="MAIN_CLASS_NAME" value="xwing.visual.HelloWorld" />
       <module name="XWing" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="visual.*" />
+          <option name="PATTERN" value="xwing.visual.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -333,15 +459,14 @@
     <frame x="0" y="27" width="2560" height="1413" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.124105014" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12490056" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Inspection Results" visible="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49960223" weight="0.32784313" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49960223" visible="true" weight="0.32784313" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -350,6 +475,7 @@
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5003978" side_tool="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.32784313" />
       <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.32941177" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -388,7 +514,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Further implementation regarding logic." />
     <MESSAGE value="Added &quot;visual&quot; package." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added &quot;visual&quot; package." />
+    <MESSAGE value="&quot;visual&quot;: Now draws a simple triangle." />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;visual&quot;: Now draws a simple triangle." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -408,14 +535,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/DiceRoller.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/xwing/logic/DiceRoller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/ShipReader.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/xwing/logic/ShipReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
@@ -425,7 +552,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/Ship.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/xwing/logic/Ship.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
@@ -441,7 +568,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/visual/SharedLibraryLoader.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/Obstacle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/xwing/logic/Obstacle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
@@ -455,20 +582,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/Move.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="150" column="6" selection-start-line="150" selection-start-column="6" selection-end-line="150" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/Unit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/measurements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -476,50 +589,146 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/Position.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/visual/shaders/screen.frag">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/visual/shaders/screen.vert">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="11" selection-start-column="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/Board.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/xwing/logic/Entity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/visual/HelloWorld.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/xwing/visual/shaders/screen.frag">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="84" column="29" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
+        <state relative-caret-position="136">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/lwjgl/lwjgl-opengl/3.2.0/lwjgl-opengl-3.2.0.jar!/org/lwjgl/opengl/GL20.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="134" column="188" selection-start-line="134" selection-start-column="188" selection-end-line="134" selection-end-column="188" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xwing/logic/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xwing/logic/Move.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xwing/visual/VUnit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5000#5001#0" expanded="true" />
-            <element signature="e#5038#5039#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/logic/Entity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/xwing/visual/shaders/screen.vert">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        <state relative-caret-position="34">
+          <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xwing/visual/shaders/vpolygon.frag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xwing/visual/shaders/vpolygon.vert">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xwing/visual/VLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="565">
+          <caret line="94" column="23" selection-start-line="94" selection-start-column="23" selection-end-line="94" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xwing/logic/Position.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding>
+            <element signature="e#675#676#0" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
+            <element signature="e#1031#1032#0" expanded="true" />
+            <element signature="e#1102#1103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xwing/logic/Unit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="26" />
+          <folding>
+            <element signature="e#585#586#0" expanded="true" />
+            <element signature="e#615#616#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xwing/visual/VPolygon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="582">
+          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#348#349#0" expanded="true" />
+            <element signature="e#379#380#0" expanded="true" />
+            <element signature="e#429#430#0" expanded="true" />
+            <element signature="e#469#470#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xwing/visual/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xwing/visual/HelloWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1343">
+          <caret line="151" column="30" lean-forward="true" selection-start-line="151" selection-start-column="30" selection-end-line="151" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6930#6931#0" expanded="true" />
+            <element signature="e#6968#6969#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/xwing/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
         </state>
       </provider>
     </entry>

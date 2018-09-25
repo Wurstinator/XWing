@@ -1,4 +1,4 @@
-package logic;
+package xwing.logic;
 
 import java.util.ArrayList;
 
@@ -7,8 +7,8 @@ import java.util.ArrayList;
  */
 public class Board {
 
-    ArrayList<Unit> units;
-    ArrayList<Obstacle> obstacles;
+    ArrayList<Unit> units = new ArrayList<>();
+    ArrayList<Obstacle> obstacles = new ArrayList<>();
 
     public void collision(Entity first, Entity second) {
         //TODO

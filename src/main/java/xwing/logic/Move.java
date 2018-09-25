@@ -1,4 +1,4 @@
-package logic;
+package xwing.logic;
 
 
 import com.vividsolutions.jts.geom.Point;
@@ -45,13 +45,15 @@ public class Move {
         Position oldPos = unit.centerPosition;
         for (double scale : stepList) {
             unit.centerPosition = executor.apply(oldPos, scale);
+            boolean collision = false;
             for (Unit otherUnit : board.units) {
                 if (unit.hitbox().intersects(otherUnit.hitbox())) {
+                    collision = true;
                     board.collision(unit, otherUnit);
-                } else {
-                    break;
                 }
             }
+            if (!collision)
+                break;
         }
 
         // Finally, check if the ship collides with an obstacle at its final position.
@@ -62,7 +64,7 @@ public class Move {
         }
     }
 
-    static List<Double> stepList() {
+    private static List<Double> stepList() {
         double stepSize = 0.05;
         LinkedList<Double> steps = new LinkedList<>();
         steps.add(0.0);

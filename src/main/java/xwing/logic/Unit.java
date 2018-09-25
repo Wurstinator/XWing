@@ -1,4 +1,4 @@
-package logic;
+package xwing.logic;
 
 
 import com.vividsolutions.jts.geom.Coordinate;
@@ -22,11 +22,15 @@ public class Unit implements Entity {
     }
 
     public Polygon hitbox() {
-        Position topleft = new Position(centerPosition), botright = new Position(centerPosition);
-        topleft.forward(1.75);
-        topleft.right(-2);
-        botright.forward(-1.75);
-        botright.right(2);
+        return hitbox(centerPosition);
+    }
+
+    public Polygon hitbox(Position pos) {
+        Position topleft = new Position(pos), botright = new Position(pos);
+        topleft.forward(2);
+        topleft.right(-1.75);
+        botright.forward(-2);
+        botright.right(1.75);
         double top = topleft.y, bot = botright.y, left = topleft.x, right = botright.x;
         Coordinate[] coordinates = {
                 new Coordinate(left, top),

@@ -1,4 +1,4 @@
-package logic;
+package xwing.logic;
 
 import com.google.gson.Gson;
 

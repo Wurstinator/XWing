@@ -1,4 +1,4 @@
-package logic;
+package xwing.logic;
 
 
 import com.vividsolutions.jts.geom.Coordinate;
@@ -25,6 +25,10 @@ public class Position {
         this.angle = other.angle;
     }
 
+    public double getAngle() {
+        return angle;
+    }
+
     public void moveTo(double distance, double directionAngle) {
         x += Math.sin(directionAngle) * distance;
         y += Math.cos(directionAngle) * distance;
@@ -39,7 +43,7 @@ public class Position {
     }
 
     public void right(double distance) {
-        moveTo(distance, (angle + Math.PI / 4) % (Math.PI * 2));
+        moveTo(distance, (angle + Math.PI / 2) % (Math.PI * 2));
     }
 
     public Point toPoint() {

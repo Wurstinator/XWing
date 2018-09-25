@@ -1,4 +1,4 @@
-package logic;
+package xwing.logic;
 
 public class DiceRoller {
     public enum Attack {

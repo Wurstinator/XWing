@@ -1,4 +1,4 @@
-package logic;
+package xwing.logic;
 
 
 import com.vividsolutions.jts.geom.Polygon;

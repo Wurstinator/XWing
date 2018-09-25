@@ -1,15 +1,14 @@
-package visual;
+package xwing.visual;
 
 import org.lwjgl.Version;
 import org.lwjgl.glfw.GLFWErrorCallback;
 import org.lwjgl.glfw.GLFWVidMode;
 import org.lwjgl.opengl.GL;
 import org.lwjgl.system.MemoryStack;
+import xwing.Constants;
+import xwing.logic.*;
 
-import java.io.IOException;
 import java.nio.IntBuffer;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
 import static org.lwjgl.glfw.Callbacks.glfwFreeCallbacks;
 import static org.lwjgl.glfw.GLFW.*;
@@ -21,10 +20,11 @@ public class HelloWorld {
 
     // The window handle
     private long window;
-    private int triangleBuffer;
-    private int triangleVertexShader;
-    private int triangleFragmentShader;
-    private int triangleProgram;
+    private float time = 0.f;
+    private Unit unit;
+    private VUnit vunit;
+    private char keyPressed = '\0';
+
 
     public void run() {
         System.out.println("Hello LWJGL " + Version.getVersion() + "!");
@@ -39,6 +39,8 @@ public class HelloWorld {
         // Terminate GLFW and free the error callback
         glfwTerminate();
         glfwSetErrorCallback(null).free();
+
+        vunit.close();
     }
 
     private void init() {
@@ -58,7 +60,7 @@ public class HelloWorld {
         glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
 
         // Create the window
-        window = glfwCreateWindow(91 * 10, 91 * 10, "Hello World!", NULL, NULL);
+        window = glfwCreateWindow(Constants.BOARD_SIZE * Constants.VISUAL_SCALE, Constants.BOARD_SIZE * Constants.VISUAL_SCALE, "Hello World!", NULL, NULL);
         if (window == NULL)
             throw new RuntimeException("Failed to create the GLFW window");
 
@@ -102,57 +104,56 @@ public class HelloWorld {
         // bindings available for use.
         GL.createCapabilities();
 
-        // Initialize triangle
-        int vertexArrayID = glGenVertexArrays();
-        glBindVertexArray(vertexArrayID);
-        float[] vertices = {
-                0.0f, 0.5f, // Vertex 1 (X, Y)
-                0.5f, -0.5f, // Vertex 2 (X, Y)
-                -0.5f, -0.5f  // Vertex 3 (X, Y)
-        };
-        triangleBuffer = glGenBuffers();
-        glBindBuffer(GL_ARRAY_BUFFER, triangleBuffer);
-        glBufferData(GL_ARRAY_BUFFER, vertices, GL_STATIC_DRAW);
 
-        // Triangle shaders
-        String vertexSrc, fragmentSrc;
-        try {
-            vertexSrc = new String(Files.readAllBytes(Paths.get("src/main/java/visual/shaders/screen.vert")));
-            fragmentSrc = new String(Files.readAllBytes(Paths.get("src/main/java/visual/shaders/screen.frag")));
-        } catch (IOException e) {
-            e.printStackTrace();
-            return;
-        }
-        triangleVertexShader = glCreateShader(GL_VERTEX_SHADER);
-        glShaderSource(triangleVertexShader, vertexSrc);
-        glCompileShader(triangleVertexShader);
-        triangleFragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
-        glShaderSource(triangleFragmentShader, fragmentSrc);
-        glCompileShader(triangleFragmentShader);
+        // QAWED presses.
+        glfwSetKeyCallback(window, (window, key, scancode, action, mods) -> {
+            if (action != GLFW_RELEASE)
+                return;
+            if (key == GLFW_KEY_Q) keyPressed = 'Q';
+            if (key == GLFW_KEY_A) keyPressed = 'A';
+            if (key == GLFW_KEY_W) keyPressed = 'W';
+            if (key == GLFW_KEY_E) keyPressed = 'E';
+            if (key == GLFW_KEY_D) keyPressed = 'D';
+        });
 
-        // Triangle program
-        triangleProgram = glCreateProgram();
-        glAttachShader(triangleProgram, triangleVertexShader);
-        glAttachShader(triangleProgram, triangleFragmentShader);
-        glBindFragDataLocation(triangleProgram, 0, "outColor");
-        glLinkProgram(triangleProgram);
-        glUseProgram(triangleProgram);
-        int positionAttribute = glGetAttribLocation(triangleProgram, "position");
-        glEnableVertexAttribArray(positionAttribute);
-        glVertexAttribPointer(positionAttribute, 2, GL_FLOAT, false, 0, 0);
+        Ship ship = new Ship();
+        unit = new Unit(ship, new Position(Constants.BOARD_SIZE / 2., Constants.BOARD_SIZE / 2., 0));
+        vunit = new VUnit(unit);
     }
 
     private void loop() {
         // Set the clear color
-        glClearColor(0.5f, 0.0f, 0.0f, 0.0f);
+        glClearColor(0.5f, 0.5f, 0.5f, 0.0f);
 
         // Run the rendering loop until the user has attempted to close
         // the window or has pressed the ESCAPE key.
         while (!glfwWindowShouldClose(window)) {
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // clear the framebuffer
 
-            // Draw triangle
-            glDrawArrays(GL_TRIANGLES, 0, 3);
+            vunit.draw();
+
+            if (keyPressed != '\0') {
+                Move.Type move = null;
+                switch (keyPressed) {
+                    case 'Q':
+                        move = Move.Type.LBank1;
+                        break;
+                    case 'A':
+                        move = Move.Type.LTurn1;
+                        break;
+                    case 'W':
+                        move = Move.Type.Straight1;
+                        break;
+                    case 'E':
+                        move = Move.Type.RBank1;
+                        break;
+                    case 'D':
+                        move = Move.Type.RTurn1;
+                        break;
+                }
+                keyPressed = '\0';
+                Move.applyMove(unit, move, new Board());
+            }
 
             glfwSwapBuffers(window); // swap the color buffers
 
